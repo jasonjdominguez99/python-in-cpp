@@ -11,10 +11,20 @@
 
 namespace python
 {
-    class data_type
+    class DataType
     {
     public:
-        virtual ~data_type() = 0;
+        virtual ~DataType() = 0;
+    };
+
+    class Int: public DataType
+    {
+    private:
+        int value;
+
+    public:
+        Int(int val) : value{val} {};
+        virtual ~Int() {};
     };
 }
 
